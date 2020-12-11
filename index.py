@@ -28,10 +28,10 @@ class Philosopher (threading.Thread):
             if(self.numero%2==0):
                 self.GarfoEsquerdo.pegar(self.numero, 'esquerdo', self.GarfoDireito)
                 self.GarfoDireito.pegar(self.numero, 'direito', self.GarfoEsquerdo)
-            else:    
+            else:
         # time.sleep(0.5)
-                self.GarfoEsquerdo.pegar(self.numero, 'esquerdo', self.GarfoDireito)
                 self.GarfoDireito.pegar(self.numero, 'direito', self.GarfoEsquerdo)
+                self.GarfoEsquerdo.pegar(self.numero, 'esquerdo', self.GarfoDireito)
             # time.sleep(0.4)
             sys.stdout.write("Filósofo %s comendo" %self.numero+"\n")
             sys.stdout.flush()
